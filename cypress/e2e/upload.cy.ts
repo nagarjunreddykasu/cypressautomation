@@ -8,6 +8,7 @@ describe('File Upload',()=>{
     })
 
     it('File Upload testing',()=>{
+        //To Create object for HomePage
         const homePage=new HomePage()
         cy.navigate();
         cy.login(data.username,data.password)
