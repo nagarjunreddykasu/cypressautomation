@@ -10,7 +10,7 @@
     "posttest": "npm run merge && npm run generate_mochawesome_report",
     "delete_reports": "node deleteReports.js"
   },
-  "author": "Nagarjun Reddy kasu",
+  "author": "Kasu Nagarjun Reddy",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.11.0",
