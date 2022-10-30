@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 5,
-    "tests": 5,
-    "passes": 5,
+    "suites": 10,
+    "tests": 10,
+    "passes": 10,
     "pending": 0,
     "failures": 0,
     "start": "2022-10-30T04:23:16.279Z",
-    "end": "2022-10-30T04:26:58.744Z",
-    "duration": 103400,
-    "testsRegistered": 5,
+    "end": "2022-10-30T04:55:23.422Z",
+    "duration": 218131,
+    "testsRegistered": 10,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -235,6 +235,296 @@
           "pending": [],
           "skipped": [],
           "duration": 28891,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "058f2796-b621-4afb-a209-3e6c4c0855a3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\arrays1.cy.ts",
+      "file": "cypress\\e2e\\arrays1.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d119ddbc-0435-4f77-80ba-5216413c4f02",
+          "title": "Arrays test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Arrays test1",
+              "fullTitle": "Arrays test Arrays test1",
+              "timedOut": null,
+              "duration": 312,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let age = [15, 25, 30, 32, 35, 40];\nlet even = age.filter(num => (num % 2) == 0);\ncy.log('Even Numbers: ' + even);",
+              "err": {},
+              "uuid": "bb06f305-e3db-43db-a39b-d1c0b9dde7db",
+              "parentUUID": "d119ddbc-0435-4f77-80ba-5216413c4f02",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb06f305-e3db-43db-a39b-d1c0b9dde7db"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 312,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "dce922f3-dcd7-4c5b-a456-9445dbb8dd8d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\datadriven.cy.ts",
+      "file": "cypress\\e2e\\datadriven.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cb04b4af-6cf9-4d15-a484-73fa27c1e1ff",
+          "title": "Handling datadriven",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "datadriven test",
+              "fullTitle": "Handling datadriven datadriven test",
+              "timedOut": null,
+              "duration": 6944,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/angularpractice/\");\n//cy.get('input[name=\"name\"]:nth-child(2)').type('Aadhya Kasu')\n//cy.get('select').select('Female')\n//using fixture (datadriven)\ncy.get('input[name=\"name\"]:nth-child(2)').type(data.name);\ncy.get('select').select(data.gender);\ncy.get(':nth-child(4) > .ng-untouched').should('have.value', data.name);\ncy.get('input[name=\"name\"]:nth-child(2)').should('have.attr', 'minlength', 2);\ncy.get('#inlineRadio3').should('be.disabled');\ncy.get(':nth-child(2) > .nav-link').click();\n/*cy.get('h4.card-title').each(($element,index,$list)=>{\n    if($element.text().includes('Blackberry')){\n        cy.get('button.btn.btn-info').eq(index).click()\n    }\n})*/\n//cy.selectProduct('Blackberry')\ndata.productName.forEach((element) => {\n    cy.selectProduct(element);\n});",
+              "err": {},
+              "uuid": "a7723a0d-0763-4e3d-8a4f-9242ecbdc08c",
+              "parentUUID": "cb04b4af-6cf9-4d15-a484-73fa27c1e1ff",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a7723a0d-0763-4e3d-8a4f-9242ecbdc08c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6944,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "61186767-e385-476f-b96b-fa9336776f87",
+      "title": "",
+      "fullFile": "cypress\\e2e\\datadriventest2.cy.ts",
+      "file": "cypress\\e2e\\datadriventest2.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b73acb03-04dd-4637-a6f7-9436dc285008",
+          "title": "Handling datadriven",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "datadriven test",
+              "fullTitle": "Handling datadriven datadriven test",
+              "timedOut": null,
+              "duration": 6291,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new homepage_1.default();\ncy.visit(\"https://rahulshettyacademy.com/angularpractice/\");\n//cy.get('input[name=\"name\"]:nth-child(2)').type('Aadhya Kasu')\n//cy.get('select').select('Female')\n//using fixture (datadriven)\nhomePage.getName().type(data.name);\nhomePage.getGender().select(data.gender);\nhomePage.getTwoWayDataBinding().should('have.value', data.name);\nhomePage.getName().should('have.attr', 'minlength', 2);\nhomePage.getEntrepreneur().should('be.disabled');\nhomePage.getShopTab().click();\n/*cy.get('h4.card-title').each(($element,index,$list)=>{\n    if($element.text().includes('Blackberry')){\n        cy.get('button.btn.btn-info').eq(index).click()\n    }\n})*/\n//cy.selectProduct('Blackberry')\ndata.productName.forEach((element) => {\n    cy.selectProduct(element);\n});",
+              "err": {},
+              "uuid": "44a117c2-3901-47e5-b870-f201b4fc01f8",
+              "parentUUID": "b73acb03-04dd-4637-a6f7-9436dc285008",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "44a117c2-3901-47e5-b870-f201b4fc01f8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6291,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "3539c82d-059f-488b-94a2-7349b5249bab",
+      "title": "",
+      "fullFile": "cypress\\e2e\\mousehover.cy.ts",
+      "file": "cypress\\e2e\\mousehover.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "748c1f9d-5173-4414-90ff-bc372b223eab",
+          "title": "Mousehover Handling",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Mousehover test",
+              "fullTitle": "Mousehover Handling Mousehover test",
+              "timedOut": null,
+              "duration": 71153,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://qa.circulus.io/login.aspx\");\ncy.get('#TxtEmail').type('nkasu@xeno.com');\ncy.get('#TxtPassword').type('xeno@123');\ncy.get('#BtnLogin').click();\ncy.wait(5000);\ncy.get('#cpBody_divAccountant > table > tbody > tr:nth-child(7) > td > div > strong > a').click();\ncy.wait(5000);\n//cy.get('#menu_aSearchPayments').invoke('show')\n//cy.contains('Search Payments').click({force:true})\ncy.get('#cpBody_divqlbillentry').click();\n//cy.get('div.input-group-btn').find('input[type=file]').eq(0).selectFile('cypress\\\\fixtures\\\\CR_Invoice.pdf',{force:true})\ncy.get('div.input-group-btn').eq(0).trigger('click', { force: true });\ncy.wait(2000);\n//cy.get('#cpBody_divFileUpload').attachFile('CR_Invoice.pdf',{force:true})\n//cy.get('input[type=file]').attachFile('CR_Invoice.pdf',{force:true})\ncy.get('input[type=file]').eq(0).selectFile('cypress\\\\fixtures\\\\CR_Invoice.pdf', { force: true });\ncy.wait(3000);\ncy.get('#cpBody_lbtnUploadFile').click();\n/* ==== Generated with Cypress Studio ==== */\ncy.get('#menu_aSearchPayment').click({ force: true });\ncy.get('#cpBody_advSearch1').click();\ncy.get('#cpBody_ddlPayeeList_btn_comb').click();\ncy.get('[data-value=\"529799-Vendor\"]').click();\ncy.get('#cpBody_btn_search').click();\n/* ==== End Cypress Studio ==== */",
+              "err": {},
+              "uuid": "872070f8-649f-4932-8dbc-bb219808fd83",
+              "parentUUID": "748c1f9d-5173-4414-90ff-bc372b223eab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "872070f8-649f-4932-8dbc-bb219808fd83"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 71153,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f6083266-12c9-473e-a8f4-2343c683297a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\upload.cy.ts",
+      "file": "cypress\\e2e\\upload.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8436517e-7e8a-4e0a-9982-1ff04fd914c2",
+          "title": "File Upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "File Upload testing",
+              "fullTitle": "File Upload File Upload testing",
+              "timedOut": null,
+              "duration": 30031,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//To Create object for HomePage\nconst homePage = new homepage_1.default();\ncy.navigate();\ncy.login(data.username, data.password);\ncy.contains(data.company).click();\nhomePage.getAddBills().click();\ncy.get('div.input-group-btn').eq(0).trigger('click', { force: true });\ncy.get('input[type=file]').eq(0).selectFile('cypress\\\\fixtures\\\\CR_Invoice.pdf', { force: true });\ncy.get('#cpBody_lbtnUploadFile').click();",
+              "err": {},
+              "uuid": "e5b60890-efa2-4416-a1a9-c81c8a57632f",
+              "parentUUID": "8436517e-7e8a-4e0a-9982-1ff04fd914c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e5b60890-efa2-4416-a1a9-c81c8a57632f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30031,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
