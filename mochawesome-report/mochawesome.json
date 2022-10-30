@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-30T04:23:16.279Z",
+    "end": "2022-10-30T04:23:16.657Z",
+    "duration": 378,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8a1b7a7b-8641-4d92-8dad-ba32400e4ac0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\arrays1.cy.ts",
+      "file": "cypress\\e2e\\arrays1.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "869ff5bb-5828-4cea-8254-6ceeb9323a9b",
+          "title": "Arrays test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Arrays test1",
+              "fullTitle": "Arrays test Arrays test1",
+              "timedOut": null,
+              "duration": 126,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let age = [15, 25, 30, 32, 35, 40];\nlet even = age.filter(num => (num % 2) == 0);\ncy.log('Even Numbers: ' + even);",
+              "err": {},
+              "uuid": "3121580e-19e6-4673-945c-2668035c761f",
+              "parentUUID": "869ff5bb-5828-4cea-8254-6ceeb9323a9b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3121580e-19e6-4673-945c-2668035c761f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 126,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

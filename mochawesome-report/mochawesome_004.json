@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-30T04:26:26.395Z",
+    "end": "2022-10-30T04:26:58.744Z",
+    "duration": 32349,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a918be68-2b58-4da4-a40e-9292a3105709",
+      "title": "",
+      "fullFile": "cypress\\e2e\\upload.cy.ts",
+      "file": "cypress\\e2e\\upload.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ceadd2b2-02ab-443c-af91-1f6bcd07caf3",
+          "title": "File Upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "File Upload testing",
+              "fullTitle": "File Upload File Upload testing",
+              "timedOut": null,
+              "duration": 28891,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//To Create object for HomePage\nconst homePage = new homepage_1.default();\ncy.navigate();\ncy.login(data.username, data.password);\ncy.contains(data.company).click();\nhomePage.getAddBills().click();\ncy.get('div.input-group-btn').eq(0).trigger('click', { force: true });\ncy.get('input[type=file]').eq(0).selectFile('cypress\\\\fixtures\\\\CR_Invoice.pdf', { force: true });\ncy.get('#cpBody_lbtnUploadFile').click();",
+              "err": {},
+              "uuid": "32af2539-0fed-45f9-9911-6673cf177883",
+              "parentUUID": "ceadd2b2-02ab-443c-af91-1f6bcd07caf3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32af2539-0fed-45f9-9911-6673cf177883"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28891,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

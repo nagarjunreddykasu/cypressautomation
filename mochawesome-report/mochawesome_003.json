@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-30T04:24:49.978Z",
+    "end": "2022-10-30T04:25:53.586Z",
+    "duration": 63608,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fa77234d-88a4-4ba7-aac1-b87796ab5b46",
+      "title": "",
+      "fullFile": "cypress\\e2e\\mousehover.cy.ts",
+      "file": "cypress\\e2e\\mousehover.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "628a0c32-b96a-4809-97f8-a9489c11b5fd",
+          "title": "Mousehover Handling",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Mousehover test",
+              "fullTitle": "Mousehover Handling Mousehover test",
+              "timedOut": null,
+              "duration": 60316,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://qa.circulus.io/login.aspx\");\ncy.get('#TxtEmail').type('nkasu@xeno.com');\ncy.get('#TxtPassword').type('xeno@123');\ncy.get('#BtnLogin').click();\ncy.wait(5000);\ncy.get('#cpBody_divAccountant > table > tbody > tr:nth-child(7) > td > div > strong > a').click();\ncy.wait(5000);\n//cy.get('#menu_aSearchPayments').invoke('show')\n//cy.contains('Search Payments').click({force:true})\ncy.get('#cpBody_divqlbillentry').click();\n//cy.get('div.input-group-btn').find('input[type=file]').eq(0).selectFile('cypress\\\\fixtures\\\\CR_Invoice.pdf',{force:true})\ncy.get('div.input-group-btn').eq(0).trigger('click', { force: true });\ncy.wait(2000);\n//cy.get('#cpBody_divFileUpload').attachFile('CR_Invoice.pdf',{force:true})\n//cy.get('input[type=file]').attachFile('CR_Invoice.pdf',{force:true})\ncy.get('input[type=file]').eq(0).selectFile('cypress\\\\fixtures\\\\CR_Invoice.pdf', { force: true });\ncy.wait(3000);\ncy.get('#cpBody_lbtnUploadFile').click();\n/* ==== Generated with Cypress Studio ==== */\ncy.get('#menu_aSearchPayment').click({ force: true });\ncy.get('#cpBody_advSearch1').click();\ncy.get('#cpBody_ddlPayeeList_btn_comb').click();\ncy.get('[data-value=\"529799-Vendor\"]').click();\ncy.get('#cpBody_btn_search').click();\n/* ==== End Cypress Studio ==== */",
+              "err": {},
+              "uuid": "1417369b-8fd3-4535-86a5-d836b86329be",
+              "parentUUID": "628a0c32-b96a-4809-97f8-a9489c11b5fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1417369b-8fd3-4535-86a5-d836b86329be"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 60316,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

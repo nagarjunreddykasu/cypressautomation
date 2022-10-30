@@ -1,0 +1,338 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-30T04:23:16.279Z",
+    "end": "2022-10-30T04:26:58.744Z",
+    "duration": 103400,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a1aa2a89-44fd-4ea6-863b-9c70318dafc1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\datadriven.cy.ts",
+      "file": "cypress\\e2e\\datadriven.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "402057ab-8b04-463a-82aa-d76633d4cdd0",
+          "title": "Handling datadriven",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "datadriven test",
+              "fullTitle": "Handling datadriven datadriven test",
+              "timedOut": null,
+              "duration": 7623,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/angularpractice/\");\n//cy.get('input[name=\"name\"]:nth-child(2)').type('Aadhya Kasu')\n//cy.get('select').select('Female')\n//using fixture (datadriven)\ncy.get('input[name=\"name\"]:nth-child(2)').type(data.name);\ncy.get('select').select(data.gender);\ncy.get(':nth-child(4) > .ng-untouched').should('have.value', data.name);\ncy.get('input[name=\"name\"]:nth-child(2)').should('have.attr', 'minlength', 2);\ncy.get('#inlineRadio3').should('be.disabled');\ncy.get(':nth-child(2) > .nav-link').click();\n/*cy.get('h4.card-title').each(($element,index,$list)=>{\n    if($element.text().includes('Blackberry')){\n        cy.get('button.btn.btn-info').eq(index).click()\n    }\n})*/\n//cy.selectProduct('Blackberry')\ndata.productName.forEach((element) => {\n    cy.selectProduct(element);\n});",
+              "err": {},
+              "uuid": "3af86955-c278-42ae-af0b-1c6c7016cffb",
+              "parentUUID": "402057ab-8b04-463a-82aa-d76633d4cdd0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3af86955-c278-42ae-af0b-1c6c7016cffb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7623,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0588f54b-67eb-488f-aa78-561b67ac5fc3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\datadriventest2.cy.ts",
+      "file": "cypress\\e2e\\datadriventest2.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a600964f-f006-4669-9748-039c2cb58352",
+          "title": "Handling datadriven",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "datadriven test",
+              "fullTitle": "Handling datadriven datadriven test",
+              "timedOut": null,
+              "duration": 6444,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new homepage_1.default();\ncy.visit(\"https://rahulshettyacademy.com/angularpractice/\");\n//cy.get('input[name=\"name\"]:nth-child(2)').type('Aadhya Kasu')\n//cy.get('select').select('Female')\n//using fixture (datadriven)\nhomePage.getName().type(data.name);\nhomePage.getGender().select(data.gender);\nhomePage.getTwoWayDataBinding().should('have.value', data.name);\nhomePage.getName().should('have.attr', 'minlength', 2);\nhomePage.getEntrepreneur().should('be.disabled');\nhomePage.getShopTab().click();\n/*cy.get('h4.card-title').each(($element,index,$list)=>{\n    if($element.text().includes('Blackberry')){\n        cy.get('button.btn.btn-info').eq(index).click()\n    }\n})*/\n//cy.selectProduct('Blackberry')\ndata.productName.forEach((element) => {\n    cy.selectProduct(element);\n});",
+              "err": {},
+              "uuid": "e8ba44fc-bde7-47c1-83f6-fb1977a563ba",
+              "parentUUID": "a600964f-f006-4669-9748-039c2cb58352",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e8ba44fc-bde7-47c1-83f6-fb1977a563ba"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6444,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fa77234d-88a4-4ba7-aac1-b87796ab5b46",
+      "title": "",
+      "fullFile": "cypress\\e2e\\mousehover.cy.ts",
+      "file": "cypress\\e2e\\mousehover.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "628a0c32-b96a-4809-97f8-a9489c11b5fd",
+          "title": "Mousehover Handling",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Mousehover test",
+              "fullTitle": "Mousehover Handling Mousehover test",
+              "timedOut": null,
+              "duration": 60316,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://qa.circulus.io/login.aspx\");\ncy.get('#TxtEmail').type('nkasu@xeno.com');\ncy.get('#TxtPassword').type('xeno@123');\ncy.get('#BtnLogin').click();\ncy.wait(5000);\ncy.get('#cpBody_divAccountant > table > tbody > tr:nth-child(7) > td > div > strong > a').click();\ncy.wait(5000);\n//cy.get('#menu_aSearchPayments').invoke('show')\n//cy.contains('Search Payments').click({force:true})\ncy.get('#cpBody_divqlbillentry').click();\n//cy.get('div.input-group-btn').find('input[type=file]').eq(0).selectFile('cypress\\\\fixtures\\\\CR_Invoice.pdf',{force:true})\ncy.get('div.input-group-btn').eq(0).trigger('click', { force: true });\ncy.wait(2000);\n//cy.get('#cpBody_divFileUpload').attachFile('CR_Invoice.pdf',{force:true})\n//cy.get('input[type=file]').attachFile('CR_Invoice.pdf',{force:true})\ncy.get('input[type=file]').eq(0).selectFile('cypress\\\\fixtures\\\\CR_Invoice.pdf', { force: true });\ncy.wait(3000);\ncy.get('#cpBody_lbtnUploadFile').click();\n/* ==== Generated with Cypress Studio ==== */\ncy.get('#menu_aSearchPayment').click({ force: true });\ncy.get('#cpBody_advSearch1').click();\ncy.get('#cpBody_ddlPayeeList_btn_comb').click();\ncy.get('[data-value=\"529799-Vendor\"]').click();\ncy.get('#cpBody_btn_search').click();\n/* ==== End Cypress Studio ==== */",
+              "err": {},
+              "uuid": "1417369b-8fd3-4535-86a5-d836b86329be",
+              "parentUUID": "628a0c32-b96a-4809-97f8-a9489c11b5fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1417369b-8fd3-4535-86a5-d836b86329be"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 60316,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a918be68-2b58-4da4-a40e-9292a3105709",
+      "title": "",
+      "fullFile": "cypress\\e2e\\upload.cy.ts",
+      "file": "cypress\\e2e\\upload.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ceadd2b2-02ab-443c-af91-1f6bcd07caf3",
+          "title": "File Upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "File Upload testing",
+              "fullTitle": "File Upload File Upload testing",
+              "timedOut": null,
+              "duration": 28891,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//To Create object for HomePage\nconst homePage = new homepage_1.default();\ncy.navigate();\ncy.login(data.username, data.password);\ncy.contains(data.company).click();\nhomePage.getAddBills().click();\ncy.get('div.input-group-btn').eq(0).trigger('click', { force: true });\ncy.get('input[type=file]').eq(0).selectFile('cypress\\\\fixtures\\\\CR_Invoice.pdf', { force: true });\ncy.get('#cpBody_lbtnUploadFile').click();",
+              "err": {},
+              "uuid": "32af2539-0fed-45f9-9911-6673cf177883",
+              "parentUUID": "ceadd2b2-02ab-443c-af91-1f6bcd07caf3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32af2539-0fed-45f9-9911-6673cf177883"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28891,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8a1b7a7b-8641-4d92-8dad-ba32400e4ac0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\arrays1.cy.ts",
+      "file": "cypress\\e2e\\arrays1.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "869ff5bb-5828-4cea-8254-6ceeb9323a9b",
+          "title": "Arrays test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Arrays test1",
+              "fullTitle": "Arrays test Arrays test1",
+              "timedOut": null,
+              "duration": 126,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let age = [15, 25, 30, 32, 35, 40];\nlet even = age.filter(num => (num % 2) == 0);\ncy.log('Even Numbers: ' + even);",
+              "err": {},
+              "uuid": "3121580e-19e6-4673-945c-2668035c761f",
+              "parentUUID": "869ff5bb-5828-4cea-8254-6ceeb9323a9b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3121580e-19e6-4673-945c-2668035c761f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 126,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

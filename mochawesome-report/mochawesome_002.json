@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-30T04:24:30.060Z",
+    "end": "2022-10-30T04:24:39.574Z",
+    "duration": 9514,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0588f54b-67eb-488f-aa78-561b67ac5fc3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\datadriventest2.cy.ts",
+      "file": "cypress\\e2e\\datadriventest2.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a600964f-f006-4669-9748-039c2cb58352",
+          "title": "Handling datadriven",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "datadriven test",
+              "fullTitle": "Handling datadriven datadriven test",
+              "timedOut": null,
+              "duration": 6444,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new homepage_1.default();\ncy.visit(\"https://rahulshettyacademy.com/angularpractice/\");\n//cy.get('input[name=\"name\"]:nth-child(2)').type('Aadhya Kasu')\n//cy.get('select').select('Female')\n//using fixture (datadriven)\nhomePage.getName().type(data.name);\nhomePage.getGender().select(data.gender);\nhomePage.getTwoWayDataBinding().should('have.value', data.name);\nhomePage.getName().should('have.attr', 'minlength', 2);\nhomePage.getEntrepreneur().should('be.disabled');\nhomePage.getShopTab().click();\n/*cy.get('h4.card-title').each(($element,index,$list)=>{\n    if($element.text().includes('Blackberry')){\n        cy.get('button.btn.btn-info').eq(index).click()\n    }\n})*/\n//cy.selectProduct('Blackberry')\ndata.productName.forEach((element) => {\n    cy.selectProduct(element);\n});",
+              "err": {},
+              "uuid": "e8ba44fc-bde7-47c1-83f6-fb1977a563ba",
+              "parentUUID": "a600964f-f006-4669-9748-039c2cb58352",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e8ba44fc-bde7-47c1-83f6-fb1977a563ba"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6444,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
