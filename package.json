@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx cypress run --headed --browser chrome --reporter mochawesome"
   },
-  "author": "Nagarjun Reddy",
+  "author": "Nagarjun Reddy kasu",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.11.0",
