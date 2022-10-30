@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --spec cypress/e2e/upload.cy.ts --headed --browser chrome --reporter mochawesome"
+    "test": "npx cypress run --headed --browser chrome --reporter mochawesome"
   },
-  "author": "",
+  "author": "Nagarjun Reddy",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.11.0",
