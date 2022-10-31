@@ -19,8 +19,8 @@ import './commands'
     namespace Cypress{
         interface Chainable{
             selectProduct(productName:string):Chainable<Element>;
-            login(username:string,password:string):Chainable<Element>;
             navigate():Chainable<Element>;
+            login(username:string,password:string):Chainable<Element>;
         }
     }
 }
